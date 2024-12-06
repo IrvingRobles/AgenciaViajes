@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Administrador - Vuelos</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar (similar al de hoteles) -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+                <a class="navbar-brand">
+                    <h1 class="m-0 text-primary"><span class="text-dark">TRAVEL</span>ER Admin</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="/admin/hoteles" class="nav-item nav-link">Admin Hoteles</a>
+                        <a href="/admin/sitios-turisticos" class="nav-item nav-link">Admin Sitios Turísticos</a>
+                        <a href="/admin/vuelos" class="nav-item nav-link active">Admin Vuelos</a>
+                        <a href="/logout" class="nav-item nav-link">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <div class="container mt-5">
+        <h2 class="text-center">Gestión de Vuelos</h2>
+
+        <!-- Formulario para agregar vuelo -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h3>Agregar Nuevo Vuelo</h3>
+            </div>
+            <div class="card-body">
+                <form id="form-add-vuelo">
+                    <div class="form-group">
+                        <label for="vuelo-aerolinea">Aerolínea</label>
+                        <input type="text" class="form-control" id="vuelo-aerolinea" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="vuelo-origen">Origen</label>
+                        <input type="text" class="form-control" id="vuelo-origen" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="vuelo-destino">Destino</label>
+                        <input type="text" class="form-control" id="vuelo-destino" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="vuelo-fecha">Fecha</label>
+                        <input type="date" class="form-control" id="vuelo-fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="vuelo-precio">Precio</label>
+                        <input type="number" class="form-control" id="vuelo-precio" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Agregar Vuelo</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Lista de vuelos existentes -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h3>Vuelos Existentes</h3>
+            </div>
+            <div class="card-body">
+                <div id="vuelos-list">
+                    <!-- Aquí se cargarán los vuelos existentes mediante JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/adminVuelos.js"></script>
+</body>
+</html>

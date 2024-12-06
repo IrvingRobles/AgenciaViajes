@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Traveler - Login</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="/css/style.css" rel="stylesheet">
+    <script defer src="/js/login.js"></script> <!-- Archivo JS para manejar la lógica del login -->
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="/" class="navbar-brand">
+                    <h1 class="m-0 text-primary"><span class="text-dark">TRAVEL</span>ER</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="/" class="nav-item nav-link">Home</a>
+                        <a href="/hoteles" class="nav-item nav-link">Hoteles</a>
+                        <a href="/vuelos" class="nav-item nav-link">Vuelos</a>
+                        <a href="/sitios-turisticos" class="nav-item nav-link">Sitios Turisticos</a>
+                        <a href="/contact" class="nav-item nav-link">Contacto</a>
+                        <a href="/login" class="nav-item nav-link active">Login</a>
+                        <a href="/register" class="nav-item nav-link">Registro</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Login Section Start -->
+    <div class="container mt-5">
+        <h2 class="text-center">Iniciar Sesión</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <!-- Mensajes de éxito o error -->
+                <div id="success-message" style="display:none; color:green;">
+                    ¡Usuario registrado con éxito! Ahora puedes iniciar sesión.
+                </div>
+                <div id="error-message" style="display:none; color:red;">
+                    Error al iniciar sesión. Revisa tus credenciales.
+                </div>
+
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Usuario</label>
+                        <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Login Section End -->
+
+    <script>
+        // Verificar si la URL tiene el parámetro ?registered=true
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('registered') === 'true') {
+            document.getElementById('success-message').style.display = 'block';
+        }
+
+        // Manejo de error de login
+        if (urlParams.get('error') === 'true') {
+            document.getElementById('error-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

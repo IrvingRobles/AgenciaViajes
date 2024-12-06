@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Traveler - Hoteles</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="/css/style.css" rel="stylesheet">
+    <script defer src="/js/hoteles.js"></script>
+<!-- Archivo JS para manejar las peticiones -->
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="/" class="navbar-brand">
+                    <h1 class="m-0 text-primary"><span class="text-dark">TRAVEL</span>ER</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="/" class="nav-item nav-link">Home</a>
+                        <a href="/hoteles" class="nav-item nav-link active">Hoteles</a>
+                        <a href="/vuelos" class="nav-item nav-link">Vuelos</a>
+                        <a href="/sitios-turisticos" class="nav-item nav-link">Sitios Turisticos</a>
+                        <a href="/contact" class="nav-item nav-link">Contacto</a>
+                        <a href="/login" class="nav-item nav-link">Login</a>
+                        <a href="/register" class="nav-item nav-link">Registro</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Hoteles Section Start -->
+    <div class="container mt-5">
+        <h2 class="text-center">Nuestros Hoteles</h2>
+        <div class="row" id="hoteles-container">
+            <!-- Aquí se insertarán las cards dinámicamente -->
+        </div>
+    </div>
+    <!-- Hoteles Section End -->
+</body>
+</html>
